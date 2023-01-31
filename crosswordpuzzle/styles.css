@@ -1,0 +1,30 @@
+body {background-color:beige;}
+
+
+
+#info{
+
+text-align: center;
+
+}
+
+#changeme{
+
+    text-align: center;
+
+}
+
+#crossword{
+    text-align: center;
+    align-self: center;
+    font-size: 36px;
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+#description{
+
+    text-align: center;
+
+}
