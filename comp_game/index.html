@@ -57,12 +57,20 @@ document.addEventListener("DOMContentLoaded", function() {
     userP = form.TotalPoints.value;
     var tableValues = [userN, userWep, userH_D, userP];
     console.log(userN, userWep, userH_D, userP);
+
+    //passes in the tablevalues parameter to build that table
     tableBuidler(tableValues);
   
   });
 });
+
+
+// build the table by extracting data from the form
 function tableBuidler(tableValues){
   var table = document.createElement("table");
+
+
+  //loops through the array of data and creates a cell in a table
   for (x in tableValues){
     let row = table.insertRow();
     let cell = row.insertCell();
@@ -72,13 +80,15 @@ function tableBuidler(tableValues){
     
 
   }
+
+  // JS css
   table.style.border = "3px solid black";
   table.style.margin = "auto";
   table.style.fontWeight = "Bold";
   table.style.fontSize = "24px";
 
   
-
+  // appends the table to the index.html to be seen by the user
   document.body.appendChild(table);
 
 
