@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="code.js"></script>
+    
+    <title>Payton Jankowics</title>
+</head>
+<body>
+    <style >body {background-color: beige;}</style>
+    
+
+<br>
+    <center>
+    <body>
+      <form id="myForm">
+        <label for="username">username</label><br>
+        <input type="text" id="username" name="username" value=""><br>
+        <label for="Weapons">Weapons</label><br>
+        <input type="text" id="Weapons" name="Weapons" value=""><br>
+        <label for="Health/Damage">Health/Damage</label><br>
+        <input type="text" id="HealthDamage" name="Health/Damage" value=""><br>
+        <label for="TotalPoints">TotalPoints</label><br>
+        <input type="text" id="TotalPoints" name="TotalPoints" value=""><br>
+        <input type="submit" value="Submit">
+      </form>
+<br>
+<br>
+<br>
+
+
+
+      <script>
+
+var form = document.getElementById("myForm");
+
+
+
+
+
+let startingChar = 0;
+let maxCharacters = 3;
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  form.addEventListener("submit", function(event) {
+    // prevent the default form submission behavior
+    event.preventDefault();
+  
+    userN = form.username.value;
+    userWep = form.Weapons.value;
+    userH_D = form.HealthDamage.value;
+    userP = form.TotalPoints.value;
+    var tableValues = [userN, userWep, userH_D, userP];
+    console.log(userN, userWep, userH_D, userP);
+    tableBuidler(tableValues);
+  
+  });
+});
+function tableBuidler(tableValues){
+  var table = document.createElement("table");
+  for (x in tableValues){
+    let row = table.insertRow();
+    let cell = row.insertCell();
+    
+    cell.innerHTML = "Attribute: " + tableValues[x];
+    console.log(tableValues[x]);
+    
+
+  }
+  table.style.border = "3px solid black";
+  table.style.margin = "auto";
+  table.style.fontWeight = "Bold";
+  table.style.fontSize = "24px";
+
+  
+
+  document.body.appendChild(table);
+
+
+
+
+}
+
+
+
+
+
+
+
+      </script>
+
+
+    </center>
+  
+
+
+</body>
+</html>
