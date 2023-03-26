@@ -17,3 +17,24 @@ tr{
     height: 60px;
 
 }
+
+.checker-piece {
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+  
+  .checker-piece.red {
+    background-color: rgb(230, 87, 87);
+  }
+  
+  .checker-piece.black {
+    background-color: rgb(44, 43, 43);
+  }
+  
+  .available-move {
+    border: 2px solid green;
+    cursor: pointer;
+  }
+  
